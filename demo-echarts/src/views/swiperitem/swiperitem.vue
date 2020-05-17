@@ -94,6 +94,7 @@ export default {
 
 .swiper-slide {
   width: 1080px;
+  
   height: 500px;
   text-align: center;
   font-size: 18px;

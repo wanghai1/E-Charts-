@@ -91,6 +91,7 @@ export default {
   padding-top: 0.5rem;
   background-color: red;
 }
+
 .swiper-slide {
   width: 1080px;
   height: 500px;

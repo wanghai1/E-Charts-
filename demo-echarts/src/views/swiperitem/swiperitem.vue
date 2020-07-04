@@ -91,10 +91,9 @@ export default {
   padding-top: 0.5rem;
   background-color: red;
 }
-
 .swiper-slide {
   width: 1080px;
-  
+
   height: 500px;
   text-align: center;
   font-size: 18px;
@@ -102,7 +101,7 @@ export default {
   /* —— 控制大小 */
   transform: scale(0.8);
 }
-.swiper-slide img{
+.swiper-slide img {
   width: 100%;
   height: 100%;
 }

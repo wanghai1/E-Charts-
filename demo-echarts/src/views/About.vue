@@ -1,18 +1,15 @@
 <template>
   <div class="about">
-    <swiper/>
+    <swiper />
   </div>
 </template>
 <script>
-import swiper from  "./swiperitem/swiperitem"
+import swiper from "./swiperitem/swiperitem";
 export default {
-  name:'About',
-  components :{
+  name: "About",
+  components: {
     swiper
   }
-}
+};
 </script>
-<style lang="stylus" scoped>
-
-
-</style>
+<style lang="stylus" scoped></style>

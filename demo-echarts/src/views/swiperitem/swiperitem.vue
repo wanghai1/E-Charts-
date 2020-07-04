@@ -101,7 +101,7 @@ export default {
   /* —— 控制大小 */
   transform: scale(0.8);
 }
-.swiper-slide img{
+.swiper-slide img {
   width: 100%;
   height: 100%;
 }

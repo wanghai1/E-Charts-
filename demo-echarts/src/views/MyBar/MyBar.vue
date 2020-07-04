@@ -6,7 +6,9 @@
     <div class="BarItem">
       <barLineEcharts :color="color2" :data="baseCharts2"></barLineEcharts>
     </div>
-    <div class="BarItem"></div>
+    <div class="BarItem bgItem">
+      <barEcharts :color="color2" :data="baseCharts2"></barEcharts>
+    </div>
     <div class="BarItem"></div>
     <div class="BarItem"></div>
     <div class="BarItem"></div>
@@ -16,7 +18,9 @@
 </template>
 
 <script>
-import barLineEcharts from "../../components/bar-line-Echart";
+import barLineEcharts from "@/components/bar-line-Echart";
+import barEcharts from "./components/barEcharts";
+
 export default {
   name: "Bar",
   data() {
@@ -29,28 +33,31 @@ export default {
           }
         ],
         legend: ["测试"],
-        xAxias: [1, 2, 3, 4, 5]
+        xAxis: [1, 2, 3, 4, 5]
       },
       baseCharts2: {
         series: [
           {
             type: "bar",
-            data: [25, 16, 48, 78, 31]
+            data: [25, 16, 48, 78, 31],
+            yAxisIndex: 0
           },
           {
             type: "line",
-            data: [30, 26, 46, 45, 90]
+            data: [30, 26, 46, 45, 90],
+            yAxisIndex: 1
           }
         ],
         legend: ["测试1", "测试2"],
-        xAxias: [1, 2, 3, 4, 5]
+        xAxis: [1, 2, 3, 4, 5]
       },
       color2: ["#ccc", "#3398DB"],
       baseNar: {}
     };
   },
   components: {
-    barLineEcharts
+    barLineEcharts,
+    barEcharts
   }
 };
 </script>
@@ -72,6 +79,9 @@ export default {
     justify-content: center;
     align-content: center;
     margin: 20px;
+  }
+  .bgItem {
+    background-color: rgb(15, 30, 58);
   }
 }
 </style>

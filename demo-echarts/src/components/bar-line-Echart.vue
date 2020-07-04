@@ -23,7 +23,7 @@ export default {
         return {
           legend: [],
           series: [],
-          xAxias: []
+          xAxis: []
         };
       }
     }
@@ -37,7 +37,7 @@ export default {
   computed: {
     options() {
       const { color, data } = this;
-      const { legend, series, xAxias } = data;
+      const { legend, series, xAxis } = data;
 
       return {
         color: color,
@@ -60,7 +60,7 @@ export default {
         },
         grid: {
           left: "10%",
-          bottom: "15%",
+          bottom: "20%",
           right: "4%",
           top: " 8%"
         },
@@ -77,7 +77,7 @@ export default {
         })),
         xAxis: {
           type: "category",
-          data: xAxias,
+          data: xAxis,
           splitLine: { show: false }
         },
         yAxis: {
@@ -91,14 +91,6 @@ export default {
   methods: {
     handerClick(paramas) {
       this.$emit("handerClick", paramas);
-    },
-    difference(arr) {
-      const testArr = [...arguments].slice(1);
-      const newArr = [];
-      arr.forEach(val => {
-        if (!testArr.incloud(val)) newArr.push(val);
-      });
-      return newArr;
     }
   }
 };
